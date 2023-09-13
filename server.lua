@@ -1,7 +1,4 @@
-ESX						= nil
-
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+ESX = exports['cnm-core']:getSharedObject() #commit to newest esx version.
 
 
 RegisterServerEvent('esx_worek:closest')
