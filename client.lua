@@ -1,13 +1,4 @@
-ESX = nil
-local HaveBagOnHead = false
-
-Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
-end)
-
+ESX = exports['cnm-core']:getSharedObject() #commit to newest esx version.
 function NajblizszyGracz() --This function send to server closestplayer
 
 local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
